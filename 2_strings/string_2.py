@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 # coding: utf-8
 
+import math
+
 # Copyright 2010 Google Inc.
 # Licensed under the Apache License, Version 2.0
 # http://www.apache.org/licenses/LICENSE-2.0
@@ -24,8 +26,12 @@
 # hagyjuk változatlanul.
 # Adjuk vissza az eredménysztringet.
 def verbing(s):
-    # TODO...
-    return
+    if len(s) > 3 and s[-3:] == 'ing':
+        return s + 'ly'
+    elif len(s) > 3:
+        return s + 'ing'
+    else:
+        return s
 
 
 # F. not_bad
@@ -37,8 +43,9 @@ def verbing(s):
 # Példa: 'This dinner is not that bad!' ->
 #        This dinner is good!
 def not_bad(s):
-    # TODO...
-    return
+    if s.find('not') < s.find('bad'):
+        return s[:s.find('not')] + 'good' + s[s.find('bad') + 3:]
+    return s
 
 
 # G. front_back
@@ -52,8 +59,7 @@ def not_bad(s):
 # a-eleje + b-eleje + a-vége + b-vége
 # Például ha a = 'abcd' és b = 'xy', akkor az eredmény 'abxcdy' legyen.
 def front_back(a, b):
-    # TODO...
-    return
+    return a[:math.ceil(len(a)/2)] + b[:math.ceil(len(b)/2)] + a[math.ceil(len(a)/2):] + b[math.ceil(len(b)/2):]
 
 
 # Egy egyszerű teszt fv. Kiírja az egyes fv.-ek visszaadott értékét, ill.
@@ -89,6 +95,7 @@ def main():
     test(front_back('Kitten', 'Donut'), 'KitDontenut')
 
 #############################################################################
+
 
 if __name__ == '__main__':
     main()
