@@ -6,7 +6,7 @@ def reverse_num(number):
 
 
 def main():
-    num = 324526
+    num = input("Number to reverse: ")
     return print(reverse_num(num))
 
 
