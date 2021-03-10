@@ -3,10 +3,10 @@
 
 
 def product(numbers):
-    sum_of_nums = 1
+    prod_of_nums = 1
     for num in numbers:
-        sum_of_nums *= num
-    return sum_of_nums
+        prod_of_nums *= num
+    return prod_of_nums
 
 
 def main():
