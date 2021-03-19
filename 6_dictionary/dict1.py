@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 # coding: utf-8
 
-import re
-
 """
 Szavak előfordulási gyakorisága
 
@@ -82,8 +80,6 @@ def main():
             d[w] = d.get(w, 0) + 1
     for k, v in sorted(d.items()):
         print('{} -> {}'.format(k, v))
-
-#############################################################################
 
 
 if __name__ == '__main__':

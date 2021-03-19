@@ -3,6 +3,11 @@
 
 
 def main():
+    lis = [n for n in str(2**1000)]
+    count = 0
+    for i in lis:
+        count += int(i)
+    print(count)
     return
 
 
