@@ -6,21 +6,7 @@ def normalize(s):
 
 
 def annagramma(a, b):
-    s1 = [c for c in normalize(a)]
-    s2 = [c for c in normalize(b)]
-    return True if sorted(s1) == sorted(s2) else False
-
-
-"""Simple test method that prints expected and given
-items and checks if the two are equal or not"""
-
-
-def test(got, expected):
-    if got == expected:
-        prefix = '✓'
-    else:
-        prefix = '✕'
-    print('[{}] got: {}, expected: {}'.format(prefix, got, expected))
+    return True if sorted([c for c in normalize(a)]) == sorted([c for c in normalize(b)]) else False
 
 
 def main():
@@ -31,6 +17,15 @@ def main():
     test(annagramma('Not Equal', 'Never will be'), False)
     test(annagramma('This will not work', 'So it does not'), False)
     return
+
+
+"""Simple test method that prints expected and given
+  items and checks if the two are equal or not"""
+
+
+def test(got, expected):
+    print('[{}] got: {}, expected: {}'.format(
+        '✓' if got == expected else '✕', got, expected))
 
 
 if __name__ == '__main__':

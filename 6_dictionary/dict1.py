@@ -76,8 +76,7 @@ def main():
             '!', '').replace('?', '').replace('__', '').replace('--', '').split()
 
     for w in words:
-        if w not in d:
-            d[w] = d.get(w, 0) + 1
+        d[w] = d.get(w, 0) + 1
     for k, v in sorted(d.items()):
         print('{} -> {}'.format(k, v))
 

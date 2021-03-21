@@ -13,12 +13,9 @@ characters and return as a translated string"""
 
 
 def translator(s):
-    hun = [c for c in 'áéíóöőúüűÁÉÍÓÖŐÚÜŰ']
-    eng = [c for c in 'aeiooouuuAEIOOOUUU']
-    d = dict(zip(hun, eng))
-    res = [d[c] if c in d.keys() else c for c in s]
-
-    return ''.join(res)
+    d = dict(zip([c for c in 'áéíóöőúüűÁÉÍÓÖŐÚÜŰ'],
+                 [c for c in 'aeiooouuuAEIOOOUUU']))
+    return ''.join([d[c] if c in d.keys() else c for c in s])
 
 
 def main():

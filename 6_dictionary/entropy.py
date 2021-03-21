@@ -3,40 +3,29 @@
 
 
 def check_password(passw):
-    for word in passw.split():
-        idx = passw.find(word)
-        pass_wordless = passw[idx+len(word):]
-        if word in pass_wordless:
-            if word == pass_wordless[pass_wordless.find(word):].split()[0]:
-                return 'Invalid password'
-    return 'Valid password'
+    return len(passw) == len(set(passw))
 
 
 def main():
-    test(check_password('aa bb cc dd ee'), 'Valid password')
-    test(check_password('aa bb cc dd aaa'), 'Valid password')
-    test(check_password('hasta la vista baby'), 'Valid password')
-    test(check_password('sarga bogre gorbe bogre'), 'Invalid password')
-    test(check_password('aa bb cc dd aa'), 'Invalid password')
-    test(check_password('aa bb bb'), 'Invalid password')
-    count = 0
-    for password in PASSWORDS.split('\n'):
-        if check_password(password) == 'Valid password':
-            count += 1
-    print(count)
+    test(check_password('aa bb cc dd ee'.split()), True)
+    test(check_password('aa bb cc dd aaa'.split()), True)
+    test(check_password('hasta la vista baby'.split()), True)
+    test(check_password('sarga bogre gorbe bogre'.split()), False)
+    test(check_password('aa bb cc dd aa'.split()), False)
+    test(check_password('aa bb bb'.split()), False)
+
+    print('There are {} correct passwords in the database.'.format(len([pw for pw in PASSWORDS.split(
+        '\n') if check_password(pw.split())])))
     return
 
 
 """Simple test method that prints expected and given
-items and checks if the two are equal or not"""
+  items and checks if the two are equal or not"""
 
 
 def test(got, expected):
-    if got == expected:
-        prefix = '✓'
-    else:
-        prefix = '✕'
-    print('[{}] got: {}, expected: {}'.format(prefix, got, expected))
+    print('[{}] got: {}, expected: {}'.format(
+        '✓' if got == expected else '✕', got, expected))
 
 
 PASSWORDS = """kvvfl kvvfl olud wjqsqa olud frc

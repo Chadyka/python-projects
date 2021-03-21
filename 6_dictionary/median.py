@@ -8,25 +8,7 @@ the 2 middle numbers if the list has even length"""
 
 
 def median(nums):
-    res = 0
-    if len(nums) % 2 == 0:
-        res = (sorted(nums)[len(nums)//2] + sorted(nums)[len(nums)//2-1])/2
-    else:
-        res = sorted(nums)[len(nums)//2]
-
-    return res
-
-
-"""Simple test method that prints expected and given
-items and checks if the two are equal or not"""
-
-
-def test(got, expected):
-    if got == expected:
-        prefix = 'OK'
-    else:
-        prefix = 'X'
-    print('[{}] got: {}, expected: {}'.format(prefix, got, expected))
+    return (sorted(nums)[len(nums)//2] + sorted(nums)[len(nums)//2-1])/2 if len(nums) % 2 == 0 else sorted(nums)[len(nums)//2]
 
 
 def main():
@@ -35,6 +17,15 @@ def main():
     test(median([1, 300, 2, 200, 1]), 2)
     test(median([3, 6, 20, 99, 10, 15]), 12.5)
     return
+
+
+"""Simple test method that prints expected and given
+items and checks if the two are equal or not"""
+
+
+def test(got, expected):
+    print('[{}] got: {}, expected: {}'.format(
+        '✓' if got == expected else '✕', got, expected))
 
 
 if __name__ == '__main__':
