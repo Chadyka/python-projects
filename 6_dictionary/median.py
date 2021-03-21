@@ -8,7 +8,8 @@ the 2 middle numbers if the list has even length"""
 
 
 def median(nums):
-    return (sorted(nums)[len(nums)//2] + sorted(nums)[len(nums)//2-1])/2 if len(nums) % 2 == 0 else sorted(nums)[len(nums)//2]
+    return (sorted(nums)[len(nums)//2] + sorted(
+        nums)[len(nums)//2-1])/2 if len(nums) % 2 == 0 else sorted(nums)[len(nums)//2]
 
 
 def main():

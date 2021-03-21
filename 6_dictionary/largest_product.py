@@ -5,8 +5,9 @@ NUM = '7316717653133062491922511967442657474235534919493496983520312774506326239
 
 
 def main():
-    print(max([math.prod([int(NUM[i+j]) for j in range(5)])
-               for i in range(len([int(n) for n in NUM])-4)]))
+    print('The largest product of five numbers following each other is: {}'
+          .format(max([math.prod([int(NUM[i+j]) for j in range(5)])
+                       for i in range(len([int(n) for n in NUM])-4)])))
     return
 
 
