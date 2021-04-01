@@ -17,7 +17,6 @@ def main():
     test(median([3, 1, 2, 5, 3]), 3)
     test(median([1, 300, 2, 200, 1]), 2)
     test(median([3, 6, 20, 99, 10, 15]), 12.5)
-    return
 
 
 """Simple test method that prints expected and given

@@ -16,7 +16,6 @@ def main():
 
     print('There are {} correct passwords in the database.'.format(len([pw for pw in PASSWORDS.split(
         '\n') if check_password(pw.split())])))
-    return
 
 
 """Simple test method that prints expected and given

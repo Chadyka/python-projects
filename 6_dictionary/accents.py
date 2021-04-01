@@ -20,7 +20,6 @@ def translator(s):
 
 def main():
     print(translator(TEXT))
-    return
 
 
 if __name__ == '__main__':

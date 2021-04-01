@@ -8,7 +8,6 @@ def main():
     print('The largest product of five numbers following each other is: {}'
           .format(max([math.prod([int(NUM[i+j]) for j in range(5)])
                        for i in range(len([int(n) for n in NUM])-4)])))
-    return
 
 
 if __name__ == '__main__':

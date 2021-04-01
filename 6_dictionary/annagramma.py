@@ -16,7 +16,6 @@ def main():
     test(annagramma('dormitory', 'dirty room'), True)
     test(annagramma('Not Equal', 'Never will be'), False)
     test(annagramma('This will not work', 'So it does not'), False)
-    return
 
 
 """Simple test method that prints expected and given

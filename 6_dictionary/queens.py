@@ -23,7 +23,6 @@ def main():
     queens([7, 3, 0, 2, 5, 1, 6, 4])
     queens([0, 4, 7, 5, 2, 6, 1, 3])
     queens([0, 4, 12, 5, 2, 9, 1, 3])
-    return
 
 
 if __name__ == '__main__':
