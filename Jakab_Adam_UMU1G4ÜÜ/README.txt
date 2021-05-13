@@ -27,14 +27,13 @@
   Ha valaki a dolgozat elküldése előtt kilép a beszélgetésből -> sikertelen ZH.
   Ha valaki menet közben kikapcsolja a webkameráját -> sikertelen ZH.
 
-* A mellékelt üres feladatN.py állományok tartalmát írják meg.
-  Az egyes feladatokhoz szükséges input fájlok mellékelve vannak.
+* Minden egyes feladatot a feladat saját alkönyvtárában kell kidolgozni.
+  A mellékelt üres feladatN.py állományok tartalmát írják meg.
+  Az egyes feladatokhoz szükséges input fájlok a megfelelő
+  alkönyvtárakban találhatók meg.
 
-  A forrás állományokat NE nevezzék át!
-  NE hozzanak létre almappákat! A forrásállományokat és képeket NE
-  tegyék be almappákba!
-
-* Az online dolgozat alatt az oktatót Teams chat-en el lehet majd érni.
+* Az online dolgozat alatt az oktatót e-mailben vagy
+  Teams chat-en el lehet majd érni.
 
 * Minden egyes feladat megoldása kész, komplett, minden mástól
   független megoldás legyen. Minden egyes feladat
@@ -42,10 +41,14 @@
 
   Példa:
 
+  $ cd feladatN
   $ ./feladatN.py    # lefut
 
   Ha egy feladat indításkor hibát produkál, arra 0 pontot fogok adni.
   Hiba alatt a szintaktikai hibát, ill. a le nem kezelt kivételeket értem.
+
+  A kivételkezelést még nem vettük, így a felmerülő hibákat az eddig tanult
+  módszerekkel kell megoldani!
 
 * A feladatok megoldásaiban az eddig tanult technikákat lehet
   használni. Harmadik fél által írt (külső) modulok nem használhatók.
@@ -54,7 +57,7 @@
   képernyőmentést is kell készíteni! Ugyanúgy járjanak el,
   mint a házi feladatok esetén.
 
-  A képeket a forráskód mellé kell tenni.
+  A képeket a forráskód mellé, a feladat mappájába kell betenni.
   A mellékelt üres képeket majd cseréljék le.
   PNG helyett JPG formátum is használható.
 
@@ -77,7 +80,7 @@
 
   Az e-mail Subject része a következő legyen:
 
-  "Python, 2. ZH, <Név>, <Neptun-kód>"
+  "Python, 1. ZH, <Név>, <Neptun-kód>"
 
   Az idézőjelet nem kell kiírni, a saját nevüket és Neptun-kódjukat
   pedig helyettesítsék be. A szóközökre figyeljenek! A csúcsos
